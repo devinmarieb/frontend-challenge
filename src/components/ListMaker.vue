@@ -26,6 +26,18 @@ export default {
     },
     addRow() { this.info.push({voice: '', text: ''}) },
     deleteData(index) { this.info.splice(index, 1) },
+    uploadData() {
+      fetch('http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c', {
+        method: 'POST',
+        headers: { 
+          'Accept': 'application/json',
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(this.info)
+      }).then((res)=> {
+        return res;
+      })
+    }
   },
   data() {
     return {
@@ -37,7 +49,4 @@ export default {
 </script>
 
 <style scoped>
-  .text-items:hover {
-    border: 2px solid red;
-  }
 </style>
