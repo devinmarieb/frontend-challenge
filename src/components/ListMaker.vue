@@ -56,7 +56,7 @@ export default {
           el.style.height = '1px';
           el.style.height = (25 + el.scrollHeight) + 'px';
         })
-      }, 100)
+      }, 300)
     },
     addRow() { this.info.push({voice: 'Person', text: 'Message'}) },
     deleteData(index) { this.info.splice(index, 1) },
@@ -106,6 +106,7 @@ export default {
   margin: 0 auto;
   padding: 2vh 2vh;
   width: 70%;
+  min-width: 500px;
   background: #fff;
   border-bottom: 1px solid rgba(0,0,0,.2);
 }
@@ -120,7 +121,6 @@ textarea {
 }
 .item-text {
   width: 100%;
-  /*height: 100px;*/
   box-sizing:border-box;
   text-align: left;
   padding: 0 50px 0 65px;
